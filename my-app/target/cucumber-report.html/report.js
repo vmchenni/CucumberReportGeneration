@@ -1,6 +1,6 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/Features/GetUsers.feature");
 formatter.feature({
-  "name": "Get Users",
+  "name": "Get User From Page 2",
   "description": "",
   "keyword": "Feature"
 });

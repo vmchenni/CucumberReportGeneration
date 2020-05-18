@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-05-18T10:54:10.529Z",
+        "start_timestamp": "2020-05-18T11:22:17.049Z",
         "line": 2,
         "name": "Get User From Page 2",
         "description": "",
-        "id": "get-users;get-user-from-page-2",
+        "id": "get-user-from-page-2;get-user-from-page-2",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5437000000,
+              "duration": 4279000000,
               "status": "passed"
             },
             "line": 3,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 3000000,
+              "duration": 8000000,
               "status": "passed"
             },
             "line": 5,
@@ -66,9 +66,9 @@
         ]
       }
     ],
-    "name": "Get Users",
+    "name": "Get User From Page 2",
     "description": "",
-    "id": "get-users",
+    "id": "get-user-from-page-2",
     "keyword": "Feature",
     "uri": "file:src/test/java/Features/GetUsers.feature",
     "tags": []
