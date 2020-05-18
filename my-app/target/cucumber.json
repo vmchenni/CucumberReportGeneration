@@ -1,0 +1,76 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-18T10:54:10.529Z",
+        "line": 2,
+        "name": "Get User From Page 2",
+        "description": "",
+        "id": "get-users;get-user-from-page-2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5437000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User calls get user API",
+            "match": {
+              "location": "stepDefinition.myStepDef.UsercallsgetuserAPI()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Verify that status code is 200 and FirstName is \"Janet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Janet\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinition.myStepDef.verify_that_status_code_is_and_FirstName_is(java.lang.Integer,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Verify Last name as \"Weaver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Weaver",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinition.myStepDef.verify_last_name_as_something(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Get Users",
+    "description": "",
+    "id": "get-users",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/GetUsers.feature",
+    "tags": []
+  }
+]

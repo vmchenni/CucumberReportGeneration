@@ -1,0 +1,3 @@
+stepDefinition\myStepDef.class
+com\BDDAutomation\app\AppTest.class
+TestRunner\TestRunner.class
