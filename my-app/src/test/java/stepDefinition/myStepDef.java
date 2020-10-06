@@ -40,7 +40,7 @@ public class myStepDef {
     @Given("User launches URL")
     public void userLaunchesURL() {
         System.out.println("Hello World!");
-        System.setProperty("webdriver.chrome.driver", "ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "ChromeDriver/chromedriver-Linux");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
