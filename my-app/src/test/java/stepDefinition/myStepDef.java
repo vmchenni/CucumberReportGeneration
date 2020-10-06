@@ -4,7 +4,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pojo.Response;
+
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 
@@ -28,5 +35,26 @@ public class myStepDef {
     @And("^Verify Last name as \"([^\"]*)\"$")
     public void verify_last_name_as_something(String sLastName) throws Throwable {
         Assert.assertEquals(sLastName,response.getData().getLast_name());
+    }
+
+    @Given("User launches URL")
+    public void userLaunchesURL() {
+        System.out.println("Hello World!");
+        System.setProperty("webdriver.chrome.driver", "ChromeDriver/chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS);
+        String baseUrl = "http://demo.guru99.com/test/newtours/";
+        driver.get(baseUrl);
+//        try{
+//            driver.findElement(By.xpath("//h1[contains(text(),'Demo Calculator')]")).isDisplayed();
+//        }catch (Exception e){
+//            System.out.println("HomePage is not displayed");
+//        }
+
+        driver.close();
+        driver.quit();
+
     }
 }

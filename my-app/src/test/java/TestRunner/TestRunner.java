@@ -6,9 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C:\\VishwanathChenni\\Project\\UdamyProject\\APIFrameWorkFromScratch\\my-app\\src\\test\\java\\Features",
+        features = "ChromeDriver/Features",
         glue = {"stepDefinition"},
-        plugin = {"pretty","html:target/cucumber-report.html","json:target/cucumber.json"}
+        plugin = {"pretty","html:target/cucumber-report.html","json:target/cucumber.json"},
+        tags = {"@Sanity"}
         )
 public class TestRunner {
+
 }

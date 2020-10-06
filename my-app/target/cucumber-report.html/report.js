@@ -1,40 +1,30 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/Features/GetUsers.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:ChromeDriver/Features/SanityTest.feature");
 formatter.feature({
-  "name": "Get User From Page 2",
+  "name": "Sanity Test",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@Sanity"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Get User From Page 2",
+  "name": "Sanity Test",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Sanity"
+    }
+  ]
 });
 formatter.step({
-  "name": "User calls get user API",
+  "name": "User launches URL",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepDefinition.myStepDef.UsercallsgetuserAPI()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify that status code is 200 and FirstName is \"Janet\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinition.myStepDef.verify_that_status_code_is_and_FirstName_is(java.lang.Integer,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Last name as \"Weaver\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinition.myStepDef.verify_last_name_as_something(java.lang.String)"
+  "location": "stepDefinition.myStepDef.userLaunchesURL()"
 });
 formatter.result({
   "status": "passed"
