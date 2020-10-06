@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class MyTestRunner {
     public static void main(String[] args){
         System.out.println("Hello World!");
-        System.setProperty("webdriver.chrome.driver","ChromeDriver/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver","ChromeDriver/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS);
         String baseUrl = "http://demo.guru99.com/test/newtours/";
